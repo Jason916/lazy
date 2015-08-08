@@ -1,0 +1,33 @@
+[PDF]
+Version=2.0 
+
+[Package Definition]
+MIFFilename=VPNInstall.MIF
+Name=Cisco Systems VPN Client 5.0.07.0290
+Version=5.0.7
+Publisher=Cisco Systems, Inc.
+Language=English
+Programs=Typical, Automated, Test
+
+[Typical]
+Name = Typical
+CommandLine = "vpnclient_setup.msi"
+UserInputRequired = TRUE
+UninstallKey={467D5E81-8349-4892-9E81-C3674ED8E451}
+AfterRunning=ProgramRestart
+SupportedClients = Win 9x, Win NT (i386)
+
+[Automated]
+Name = Automated
+CommandLine = "vpnclient_setup.msi" /S
+UserInputRequired = FALSE
+UninstallKey={467D5E81-8349-4892-9E81-C3674ED8E451}
+AfterRunning=ProgramRestart
+SupportedClients = Win 9x, Win NT (i386)
+
+[Test]
+Name = Test
+CommandLine = "vpnclient_setup.msi" /T /S
+UserInputRequired = FALSE
+AfterRunning=ProgramRestart
+SupportedClients = Win 9x, Win NT (i386)
